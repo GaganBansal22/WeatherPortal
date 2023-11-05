@@ -50,7 +50,10 @@ function App(){
 
   if(isLoading){
     return (
-      <img style={{marginTop:50, maxWidth:'25%',zIndex:1,position:'fixed'}} src="Images/loading.gif" alt="Loading..."/>
+      <>
+        <SearchForm updateLoc={updateLoc}/>
+        <img style={{marginTop:50, maxWidth:'25%',zIndex:1,position:'fixed'}} src="Images/loading.gif" alt="Loading..."/>
+      </>
     )
   }
   if(!data || data.error){
