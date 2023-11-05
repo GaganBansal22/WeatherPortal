@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { weatherKey } from "../keys";
+// import { weatherKey } from "../keys";
+const weatherKey=import.meta.env.VITE_REACT_APP_weatherKey
 import axios from "axios";
 import LocationSearchOption from "./LocationSearchOption";
 
