@@ -1,9 +1,12 @@
 import { useState,useEffect } from 'react';
 import './App.css';
-import {geocodingKey,weatherKey} from "../keys"
+// import {geocodingKey,weatherKey} from "../keys"
 import axios from "axios";
 import Weatherinfo from "./Weatherinfo";
 import SearchForm from "./SearchForm";
+
+const weatherKey=import.meta.env.VITE_REACT_APP_weatherKey
+const geocodingKey=import.meta.env.VITE_REACT_APP_geocodingKey
 
 function App(){
   let [loc,setLoc]=useState({lat:28.7041,long:77.1025});
