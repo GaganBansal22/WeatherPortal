@@ -136,7 +136,6 @@ ol{
 .futureForecastHeading{
   font-weight: 700;
   font-size: 130%;
-  /* margin: 0 auto; */
   margin: 0 auto;
 }
 .futureForecastHeadingToggler{
@@ -147,11 +146,9 @@ ol{
 }
 .futureForecastEntryDiv{
   font-size: 110%;
-  font-weight: 500;
 }
 .futureForecastEntryDivData{
   margin: 0 10%;
-  text-align: center;
   display: flex;
   justify-content: space-between;
 }
@@ -174,9 +171,17 @@ ol{
     min-width: 100%;
   }
   .futureForecast{
-    width: 90%;
+    width: 95%;
+  }
+  .futureForecastHeading{
+    font-weight: 700;
+    font-size: 130%;
+    margin: 0 auto;
+  }
+  .futureForecastEntryDiv{
+    font-size: 100%;
   }
   .futureForecastEntryDivData{
-    margin: 0 5%;
+    margin: 0 0 0 5%;
   }
 }
