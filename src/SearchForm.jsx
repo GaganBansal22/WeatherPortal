@@ -5,7 +5,7 @@ import axios from "axios";
 import LocationSearchOption from "./LocationSearchOption";
 
 let url="https://api.openweathermap.org/geo/1.0/direct";
-let config={params:{q:"",appid:weatherKey,limit:5}};
+let config={params:{q:"",appid:weatherKey,limit:10}};
 
 function SearchForm({updateLoc}){
     let searchFormElement=document.querySelector(".search");

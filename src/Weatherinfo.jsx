@@ -1,3 +1,6 @@
+import AirQuality from "./AirQuality";
+import FutureForecast from "./FutureForecast";
+
 function changeBackground(wCondition,timeData){
     if(wCondition=="Sunny")
       wCondition="Clear";
@@ -22,8 +25,9 @@ function Weatherinfo({data}){
     if(wCondition=="Thunderstorm")
       needWhiteText=true;
     return (
+      <>
         <div className={needWhiteText?"main whitetext":"main"}>
-            <h1 className="location">{geoData.data.city}, {geoData.data.countryName}</h1>
+          <h1 className={needWhiteText?"location whitetext":"location"}>{geoData.data.city}, {geoData.data.countryName}</h1>
             <h2 className="temp">{wData.main.temp} °C</h2>
             <h2 className="mainw">{wData.weather[0].main}</h2>
             <div className="extra">
@@ -31,8 +35,11 @@ function Weatherinfo({data}){
                 <h3 className="maxtemp">Max: {wData.main.temp_max} °C</h3>
                 <h3 className="feeltemp">Feels like: {wData.main.feels_like} °C</h3>
                 <h3 className="humidity">Humidity: {wData.main.humidity} %</h3>
+                <AirQuality data={data}/>
             </div>
+          <FutureForecast needWhiteText={needWhiteText} data={data}/>
         </div>
+      </>
     )
 }
 

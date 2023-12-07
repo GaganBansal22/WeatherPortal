@@ -22,11 +22,15 @@ function App(){
       let url2=`https://api.bigdatacloud.net/data/reverse-geocode`;
       let url2config={params:{latitude:loc.lat,longitude:loc.long,key:geocodingKey}};
       let url3=`https://api-bdc.net/data/timezone-by-location?latitude=${loc.lat}&longitude=${loc.long}&key=${geocodingKey}`;
+      let url4=`https://api.openweathermap.org/data/2.5/air_pollution?lat=${loc.lat}&lon=${loc.long}&appid=${weatherKey}`
+      let url5=`https://api.openweathermap.org/data/2.5/forecast?lat=${loc.lat}&lon=${loc.long}&appid=${weatherKey}&units=metric`
       try{
         let geoData=await axios.get(url2,url2config);
         let timeData=await axios.get(url3);
         let wData=await axios.get(url1);
-        setData({geoData,wData,timeData});
+        let aqiData=await axios.get(url4)
+        let futureData=await axios.get(url5);
+        setData({geoData,wData,timeData,aqiData,futureData});
         setIsLoading(false);
       }catch (error) {
           setData({error:true});

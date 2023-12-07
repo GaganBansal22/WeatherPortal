@@ -6,6 +6,7 @@ body,#root,.mainData{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
+  margin: 0;
 }
 .whitetext{
   color:white;
@@ -17,6 +18,7 @@ body,#root,.mainData{
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 40%;
 }
 .temp,.mainw{
   margin-top: 0;
@@ -24,12 +26,11 @@ body,#root,.mainData{
 .extra{
   display: flex;
   width: 100%;
-  max-width: 25vw;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-.mintemp,.maxtemp,.feeltemp,.humidity{
+.mintemp,.maxtemp,.feeltemp,.humidity,.airquality{
   text-align: center;
   width:50%;
 }
@@ -40,23 +41,10 @@ body,#root,.mainData{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 35%;
+  width: 45%;
   border-radius: 20px ;
   padding: 0.7% 0.1%;
   margin-top: 1%;
-}
-@media (max-width:576px) {
-  .searchdiv{
-    width: 80%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin-top: 5%;
-  }
-  .extra{
-    min-width: 100%;
-  }
 }
 .searchdivinitial{
   background-color: #efefef;
@@ -124,4 +112,64 @@ ol{
 }
 .currentbutton:hover{
   border: 2px solid black;
+}
+.redtxt{
+  color: red;
+}
+.greentxt{
+  color: #66FF00;
+}
+.yellowtxt{
+  color: #FFFF00;
+}
+.futureForecast{
+  background-color: white;
+  color: black;
+  min-width: 80%;
+  margin: 2% 0;
+}
+.futureForecastHeadingDiv{
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 0;
+}
+.futureForecastHeading{
+  font-weight: 700;
+  font-size: 130%;
+  margin: 0 auto;
+}
+.futureForecastHeadingToggler{
+  margin: 1% 2% 0 0;
+}
+.futureForecastEntries{
+  margin: 2% 0 3% 0;
+}
+.futureForecastEntryDiv{
+  font-size: 110%;
+  font-weight: 500;
+}
+.futureForecastEntryDivData{
+  margin: 0 10%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.futureForecastEntryDivHR{
+  width: 90%;
+}
+@media (max-width:768px) {
+  .searchdiv{
+    width: 80%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 5%;
+  }
+  .main{
+    min-width: 100%;
+  }
+  .futureForecastEntryDivData{
+    margin: 0 5%;
+  }
 }
