@@ -34,7 +34,7 @@ body,#root,.mainData{
   text-align: center;
   width:50%;
 }
-.feeltemp,.humidity{
+.feeltemp,.humidity,.airquality{
   width: 100%;
 }
 .searchdiv{
@@ -126,7 +126,7 @@ ol{
   background-color: white;
   color: black;
   min-width: 80%;
-  margin: 2% 0;
+  margin: 2% 0 5% 0;
 }
 .futureForecastHeadingDiv{
   display: flex;
@@ -136,6 +136,7 @@ ol{
 .futureForecastHeading{
   font-weight: 700;
   font-size: 130%;
+  /* margin: 0 auto; */
   margin: 0 auto;
 }
 .futureForecastHeadingToggler{
@@ -157,9 +158,12 @@ ol{
 .futureForecastEntryDivHR{
   width: 90%;
 }
+.futureForecastWaterDroplet{
+  width: 20%;
+}
 @media (max-width:768px) {
   .searchdiv{
-    width: 80%;
+    width: 90%;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 1%;
@@ -168,6 +172,9 @@ ol{
   }
   .main{
     min-width: 100%;
+  }
+  .futureForecast{
+    width: 90%;
   }
   .futureForecastEntryDivData{
     margin: 0 5%;

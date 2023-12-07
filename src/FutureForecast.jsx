@@ -2,6 +2,8 @@ import { useState } from "react"
 
 function FutureForecast({data}){
     let futureData=data.futureData.data
+    if(futureData.list.length==40)
+        futureData.list.splice(0,2)
     const [showEntries,SetShowEntries]=useState(false)
     function handleShowEntriesClick(){
         SetShowEntries(!showEntries)
@@ -29,7 +31,7 @@ export default FutureForecast
 
 function FutureDataEntry({data}){
     function returnDateAndTime(date){
-        return date.substring(8,10)+"-"+date.substring(5,7)+"-"+date.substring(2,4)+" "+date.substring(11,16)
+        return date.substring(8,10)+"/"+date.substring(5,7)+" "+date.substring(11,16)
     }
     let wCondition=data.weather[0].main
     let imgSrc="cloud.svg"
@@ -49,8 +51,8 @@ function FutureDataEntry({data}){
             <div className="futureForecastEntryDivData">
                 <span>{returnDateAndTime(data.dt_txt)}</span>
                 <span><img src={`/Images/${imgSrc}`} alt="" /> {data.weather[0].main}</span>
-                <span>{data.main.temp} °C</span>
-                <span><img src="Images/icons8-water-48.png" style={{width:"20%"}} alt="" /> {Math.trunc(data.pop*100)}%</span>
+                <span>{Math.trunc(data.main.temp)} °C</span>
+                <span><img src="Images/icons8-water-48.png" className="futureForecastWaterDroplet" alt="" /> {Math.trunc(data.pop*100)}%</span>
             </div>
             <hr className="futureForecastEntryDivHR" />
         </div>
