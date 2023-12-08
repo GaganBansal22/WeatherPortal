@@ -20,6 +20,10 @@ body,#root,.mainData{
   align-items: center;
   min-width: 40%;
 }
+.location{
+  max-width: 90%;
+  text-align: center;
+}
 .temp,.mainw{
   margin-top: 0;
 }
