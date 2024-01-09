@@ -25,12 +25,10 @@ function App(){
       let url4=`https://api.openweathermap.org/data/2.5/air_pollution?lat=${loc.lat}&lon=${loc.long}&appid=${weatherKey}`
       let url5=`https://api.openweathermap.org/data/2.5/forecast?lat=${loc.lat}&lon=${loc.long}&appid=${weatherKey}&units=metric`
       try{
-        let geoData=await axios.get(url2,url2config);
-        let timeData=await axios.get(url3);
-        let wData=await axios.get(url1);
-        let aqiData=await axios.get(url4)
-        let futureData=await axios.get(url5);
-        setData({geoData,wData,timeData,aqiData,futureData});
+        const [geoDataResponse, timeDataResponse, wDataResponse, aqiDataResponse, futureDataResponse] = await Promise.all([
+          axios.get(url2, url2config),axios.get(url3),axios.get(url1),axios.get(url4),axios.get(url5)
+        ]);
+        setData({ geoData:geoDataResponse, wData:wDataResponse, timeData:timeDataResponse, aqiData:aqiDataResponse, futureData:futureDataResponse });
         setIsLoading(false);
       }catch (error) {
           setData({error:true});
