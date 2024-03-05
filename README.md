@@ -12,8 +12,8 @@ provides an overview of the features, setup instructions, and guidelines for con
 - **5-Day Forecast**: Displays a 5-day forecast with weather details including temperature highs and lows, wind speed, and weather conditions for every 3 hours.
 - **Responsive Design**: The website is designed to be responsive and accessible across various devices and screen sizes.
 ## Technologies Used
-- **Frontend**: ReactJs,HTML,CSS,JavaScript
-- **Backend**: OpenWeatherMap API (for fetching weather data), BigDataCloud API (for reverse geocoding)
+- **Frontend**: HTML,CSS,JavaScript,React.js
+- **APIs**: OpenWeatherMap API (for fetching weather data), BigDataCloud API (for reverse geocoding)
 ## Setup Instructions
 To set up WeatherPortal locally, follow these steps:
 1. Clone the repository to your local machine: git clone https://github.com/GaganBansal22/WeatherPortal.git 
