@@ -4,7 +4,7 @@ Welcome to WeatherPortal, a weather website that allows users to search for weat
 and retrieve the current weather conditions along with a 3-hour forecast for the next 5 days. This README file
 provides an overview of the features, setup instructions, and guidelines for contributing to the project.
 
-<img width="766" alt="1" src="https://github.com/GaganBansal22/WeatherPortal/assets/122668312/5b3a6802-0d4c-4353-814a-70f911e589ff">
+![image](https://github.com/GaganBansal22/WeatherPortal/assets/122668312/631f34d7-7c34-4127-b2bc-9c5e504d7e28)
 
 ## Features
 - **Search Functionality**: Users can input any location (city, town, etc.) into the search bar to retrieve weather details.
