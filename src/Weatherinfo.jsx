@@ -27,14 +27,14 @@ function Weatherinfo({data}){
     return (
       <>
         <div className={needWhiteText?"main whitetext":"main"}>
-          <h1 className={needWhiteText?"location whitetext":"location"}>{geoData.data.city}, {geoData.data.countryName}</h1>
+          <h1 className={needWhiteText?"location text-center whitetext":"location text-center"}>{geoData.data.city}, {geoData.data.countryName}</h1>
             <h2 className="temp">{wData.main.temp} °C</h2>
             <h2 className="mainw">{wData.weather[0].main}</h2>
             <div className="extra">
-                <h3 className="mintemp">Min: {wData.main.temp_min} °C</h3>
-                <h3 className="maxtemp">Max: {wData.main.temp_max} °C</h3>
-                <h3 className="feeltemp">Feels like: {wData.main.feels_like} °C</h3>
-                <h3 className="humidity">Humidity: {wData.main.humidity} %</h3>
+                <h3 className="mintemp text-center">Min: {wData.main.temp_min} °C</h3>
+                <h3 className="maxtemp text-center">Max: {wData.main.temp_max} °C</h3>
+                <h3 className="feeltemp text-center">Feels like: {wData.main.feels_like} °C</h3>
+                <h3 className="humidity text-center">Humidity: {wData.main.humidity} %</h3>
                 <AirQuality data={data}/>
             </div>
           <FutureForecast needWhiteText={needWhiteText} data={data}/>

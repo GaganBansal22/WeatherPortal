@@ -10,7 +10,7 @@ function FutureForecast({data}){
     }
     return (
         <div className="futureForecast">
-            <div onClick={handleShowEntriesClick} role="button" className="futureForecastHeadingDiv">
+            <div onClick={handleShowEntriesClick} role="button" className="futureForecastHeadingDiv cursor-pointer">
                 <span className="futureForecastHeading">5-Day Forecast</span>
                 <span className="futureForecastHeadingToggler">
                     <img src={showEntries?"Images/caret-up-fill.svg":"Images/caret-down-fill.svg"} alt="" />

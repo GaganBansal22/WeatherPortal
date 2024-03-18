@@ -22,7 +22,6 @@ body,#root,.mainData{
 }
 .location{
   max-width: 90%;
-  text-align: center;
 }
 .temp,.mainw{
   margin-top: 0;
@@ -34,11 +33,11 @@ body,#root,.mainData{
   flex-wrap: wrap;
   justify-content: center;
 }
-.mintemp,.maxtemp,.feeltemp,.humidity,.airquality{
+.mintemp,.maxtemp,.feeltemp,.humidity{
   text-align: center;
   width:50%;
 }
-.feeltemp,.humidity,.airquality{
+.feeltemp,.humidity{
   width: 100%;
 }
 .searchdiv{
@@ -188,4 +187,13 @@ ol{
   .futureForecastEntryDivData{
     margin: 0 0 0 5%;
   }
+}
+.text-center{
+  text-align: center;
+}
+.mb-0{
+  margin-bottom: 0;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
